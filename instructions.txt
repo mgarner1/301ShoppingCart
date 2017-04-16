@@ -1,0 +1,20 @@
+Using your previous classes assignment you will add a shopping cart to the site
+
+config.php
+- Create a session variable named cart, if not set,and set it equal to a new Cart object
+
+book.php
+- add a form with a hidden input for the book isbn and a text box for the quantity
+- When the form is submitted:
+	- Create a variable named $cart that is a reference to the session variable storing the cart
+	- Add the isbn and the quantity to the cart
+
+class.ShoppingCart.php
+- Create a class that implements the iterator interface
+- As a property, have an associative array that holds the book isbn as the key and stores the quantity named $items (view slides for reference)
+- an addToCart method that adds the isbn and quantity to the associative array
+- methods required by the iterator interface implemented
+
+cart.php
+- Loop over the ShoppingCart object stored in the session making use of the iterator
+- For each item in the cart list the book isbn, and quantity
